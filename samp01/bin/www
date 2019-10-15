@@ -81,6 +81,91 @@ function onError(error) {
  * Event listener for HTTP server "listening" event.
  */
 
+//var os = require('os');
+
+//console.log(os.hostname());
+//console.log(os.type());
+//console.log(os.platform());
+//console.log(os.arch());
+//console.log(os.release());
+//console.log(os.uptime());
+//console.log(os.loadavg());
+//console.log(os.freemem());
+//console.log(os.cpus());
+//console.log(os.networkInterfaces());
+
+//console.log('filename:', __filename);
+/*
+console.time('alpha');
+
+var output = 1;
+for(var i = 1; i<=10; i++)
+	output += i;
+
+console.log('Result:', output);
+console.timeEnd('alpha');
+*/
+
+//console.log('\u001b[35m', 'hello world');
+/*
+process.argv.fcrEach(function (item, index){
+	console.log(index + ':' + typeof(item) + ':', item);
+	if(item == '--exit'){
+		var exitTime = Number(process.argv[index+1]);
+		setTimeout(function(){
+			process.exit();
+		}, exitTime);
+	}
+})
+
+*/
+
+//console.log('- process.env', process.uptime());
+
+//var main = require('./main');
+//var url = require('url');
+//var parsedObject = url.parse('http://www.hanb.co.kr/trackback/978-89-7914-874-9');
+//console.log(parsedObject);
+//var queryString = require('querystring');
+//var parsedObject = url.parse('http://hanb.co.kr/book/look.html?isbn=978-89-7914-874-9');
+//console.log(queryString.parse(parsedObject.query));
+
+//var fs = require('fs');
+//var text = fs.readFileSync('textfile.txt', 'utf8');
+//console.log(text);
+
+//console.log(Boolean(true));
+
+
+
+/*var server = require('http').createServer();
+
+server.listen(52253,function(){
+   console.log('Server Running at http://127.0.0.1:52253');
+});
+
+var test = function(){
+server.close();};
+setTimeout(test,10000);
+*/
+
+/*
+var http = require('http');
+
+var server = http.createServer();
+
+server.listen(52273);
+*/
+
+//var http = require('http');
+//http.createServer(function(request, response){}).listen(52273),
+//function (){ console.log('Server Running at:http://127.00.1:52273');};
+
+//var server = require('http').createServer();
+//server.listen(52273, function(){ console.log('server run at 52273');});
+
+//setInterval(function(){ server.close(); }, 10000);
+
 function onListening() {
   var addr = server.address();
   var bind = typeof addr === 'string'
