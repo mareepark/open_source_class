@@ -1,13 +1,26 @@
-/**
- * http://usejsdoc.org/
- */
+//samp.txt
+//read_file.txt
+//read_file2.txt
 
-var http = require('http');
+var fs = require('fs');
 
-http.createServer(function (request, response){
-	response.writeHead(200, {'Content-Type': 'text/html'});
-	response.end('<h2>Test-Flie-1</h2>')
-	
-}).listen(52000, function(){
-	console.log('server running');
-});
+try{
+	var data = fs.readFileSync('./sapm.txt', 'utf8');
+	console.log(data.toString());
+} catch(e){
+	console.log('Error:', e.stack);
+}
+
+try{
+	var data2 = fs.readFileSync(data, 'utf8');
+	console.log(data2.toString());
+} catch(e){
+	console.log('Error:', e.stack);
+}
+
+try{
+	var data3 = fs.readFileSync(data2, 'utf8');
+	console.log(data3.toString());
+} catch(e){
+	console.log('Error:', e.stack);
+}
