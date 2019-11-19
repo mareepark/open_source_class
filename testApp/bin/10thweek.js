@@ -121,7 +121,7 @@ app.use(function(request, response){
 	response.send('<h1>express b</h1>');
 });
 */
-
+/*
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: false}));
 
@@ -133,9 +133,11 @@ app.get('/', function(request, response){
 	}
 });
 app.get('/login', function(request, response){
-	fs.readFile('login.html', function(error, data){
+	fs.readFile('./bin/login.html', function(error, data){
+		console.log(error);
+		console.log(data);
 		response.send(data.toString());
-	})
+	});
 });
 app.post('/login', function(request, response){
 	var login = request.body.login;
@@ -149,18 +151,18 @@ app.post('/login', function(request, response){
 	}
 });
 
-app.listen(52283, function(){
+app.listen(52284, function(){
 	
 });
 
+*/
 
-/*
 var fs = require('fs');
 var multipart = require('connect-multiparty');
 
-app.use(multipart({ uploadDir: __diraname + '/multipart' }) );
+app.use(multipart({ uploadDir: __dirname + '/multipart' }) );
 app.get('/', function(request, response){
-	fs.readFile('htmlPage.html', function(error, data){
+	fs.readFile('./bin/htmlPage.html', function(error, data){
 		response.send(data.toString());
 		});
 });
@@ -198,5 +200,3 @@ app.post('/', function(request, response){
 app.listen(52283, function(){
 	
 });
-
-*/
